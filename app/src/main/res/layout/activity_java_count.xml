@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.JavaCountActivity">
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="以下是JavaEE工程师不同的工作经验所对应的不同薪资情况，
+具体如折线图与柱状图所示："
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro"
+        app:layout_constraintBottom_toTopOf="@id/chart_bottom"
+        >
+    </com.github.mikephil.charting.charts.LineChart>
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chart_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            ></com.github.mikephil.charting.charts.BarChart>
+</android.support.constraint.ConstraintLayout>
